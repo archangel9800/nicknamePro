@@ -1,0 +1,38 @@
+/**
+ * css/variable.css
+ * Copyright (c) ТОВ "Елпрофи", 2019 All rights reserved.
+ * Шаблон разработали Левковец И.В., Броновицкий А.Н., 2019. archangel, b1te
+ * 13.11.2019
+ */
+
+ :root{
+    --mainNickCol: 255,61,23;
+    --mainContCol: 255,61,23;
+    --black: 0,0,0;
+    --white: 255,255,255;
+    --grey1: 102,102,102;
+    --grey2: 156,156,156;
+    --grey3: 190,190,190;
+    
+    
+    --rubik: 'Rubik', sans-serif;
+    
+    --mainBg: url('../img/img/main-background.png');
+    --mainBgMob: url('../img/img/main-background_mob.png');
+    
+/*    5px*/
+    --fnt0p25rem: 0.25rem;  
+/*    12px*/
+    --fnt1p2rem: 1.2rem;  
+/*    13px*/
+    --fnt1p3rem: 1.3rem;  
+/*    16px*/
+    --fnt1p6rem: 1.6rem;  
+/*    18px*/
+    --fnt1p8rem: 1.8rem;  
+/*    24px*/
+    --fnt2p4rem: 2.4rem;  
+/*    48px*/
+    --fnt4p8rem: 4.8rem;  
+
+} 
