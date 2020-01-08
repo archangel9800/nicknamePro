@@ -10,13 +10,11 @@
 .grey3Fnt{
     color: rgb(var(--grey3));
 }
-.mainZ51ColFnt{
+.mainNickCol{
     color: rgb(var(--mainNickCol));
-    opacity: 0.99;
 }
 .mainContColFnt{
     color: rgb(var(--mainContCol));
-    opacity: 0.99;
 }
 
 /*    12px*/
@@ -26,6 +24,10 @@
 /*    13px*/
 .fnt1p3rem{
     font-size: var(--fnt1p3rem);
+}
+/*    14px*/
+.fnt1p3rem{
+    font-size: var(--fnt1p4rem);
 }
 /*    16px*/
 .fnt1p6rem{
@@ -44,9 +46,34 @@
     font-size: var(--fnt4p8rem);
 }
 
+.letterSp0p1 {
+    letter-spacing: 0.1rem;
+}
 .letterSp0p6 {
     letter-spacing: 0.6rem;
 }
+
+body .hoverLinkOrBr{ 
+    cursor: pointer;
+    color: rgb(var(--mainNickCol));
+    -webkit-transition: all 0.1s;transition: all 0.1s;
+    border-bottom: 0.1rem solid var(--transp);
+}
+body .hoverLinkOrBr:hover, body .hoverLinkG[class*='active']{ 
+    border-bottom: 0.1rem solid rgb(var(--mainNickCol));
+}
+
+body .hoverLinkOr{ 
+    cursor: pointer;
+    -webkit-transition: all 0.1s;transition: all 0.1s;
+    border-bottom: 0.1rem solid var(--transp);
+}
+body .hoverLinkOr:hover, body .hoverLinkG[class*='active']{ 
+    border-bottom: 0.1rem solid rgb(var(--mainNickCol));
+    color: rgb(var(--mainNickCol));
+}
+
+
 #svgIconsStorage{
     display: none;
 }
@@ -70,8 +97,6 @@ body{
 }
 body *{
     color: rgb(var(--grey1));
-     scrollbar-width: thin;
-     scrollbar-color:  rgb(var(--mainNickCol)) rgb(var(--grey2));
 }
 body a{ 
     text-decoration: none !important;
@@ -82,7 +107,11 @@ body a{
     max-width: 120rem;
     margin: 0 auto;
 }
-
+.separator{
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+}
 
 
 
@@ -96,6 +125,10 @@ body a{
     max-width: 140rem;
     margin: 0 auto;
     border-top: 0.25rem solid rgb(var(--mainNickCol));
+    padding: 0 0.5rem;
+    display: -webkit-box;display: -ms-flexbox;display: flex;
+    -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
+    -webkit-box-align: stretch;-ms-flex-align: stretch;align-items: stretch;
 }
 @media (min-width: 0px) {
     .mainWrap{
@@ -148,24 +181,30 @@ header{
 .logoImg img{
     display: block;
     width: 100%;
-    max-width: 46rem;
     margin: 0 auto;
+}
+@media (min-width: 0px){
+    .logoImg img{
+        max-width: 24rem;
+    }
+}
+@media (min-width: 992px){
+    .logoImg img{
+        max-width: 46rem;
+    }
 }
 /*logoImg style end*/
 
 /*mainMenu style start*/
-.mobBtnMenu{
-    margin-top: 2%;
-    padding-left: 2%;
+.mobBtnMenu {
+    padding-left: 1.2rem;
 }
 .mobBtnMenu .svgIcons{
     fill: rgb(var(--mainNickCol));
     width: 100%;
     height: 100%;
-    max-width: 5rem;
-    max-height: 5rem;
-    min-width: 3.5rem;
-    min-height: 3.5rem;
+    width: 4.1rem;
+    height: 4.1rem;
     cursor: pointer;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
@@ -176,9 +215,9 @@ header{
 .mobBtnMenu .svgIcons:hover{
     fill: rgb(var(--white));
 }
-
 #mainMenu{
     position: relative;
+    z-index: 999;
 }
 #mainMenu li.closeMenuBtn{
     position: absolute;
@@ -188,8 +227,8 @@ header{
 }
 #mainMenu li.closeMenuBtn .svgIcons{
     fill: rgb(var(--black));
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -198,10 +237,6 @@ header{
 }
 #mainMenu li.closeMenuBtn .svgIcons:hover{
     fill: rgb(var(--white));
-}
-#mainMenu, #mainMenu ul{
-    list-style-type: none;
-    padding-left: 1.2rem;
 }
 #mainMenu li span, #mainMenu li a{
     text-transform: uppercase;
@@ -215,30 +250,12 @@ header{
     -ms-transition: all 0.1s;
     -o-transition: all 0.1s;
 }
-#mainMenu li span:hover, #mainMenu li a:hover{
-    color: rgb(var(--mainNickCol));
-}
 #mainMenu>li.hasSub>ul li span, #mainMenu>li.hasSub>ul li a{
     text-transform: none; 
     letter-spacing: normal;
 }
-#mainMenu>li.hasSub>ul li span:hover, #mainMenu>li.hasSub>ul li a:hover{
-    color: rgb(var(--black));
-}
-
-
 #mainMenu>li.hasSub{
-    position: relative;   
-}
-#mainMenu>li.hasSub>ul{
-    background-color: rgb(var(--mainNickCol));
-    margin-top: 2rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    position: relative;
 }
 #mainMenu .hasSub span{
     display: -webkit-box;
@@ -248,25 +265,9 @@ header{
         -ms-flex-align: center;
             align-items: center;
 }
-#mainMenu .hasSub span::before{
-    content: '';
-    display: block;
-    border-style: solid;
-    border-width: 0.5rem 0.3rem 0 0.3rem;
-    border-color: rgb(var(--mainNickCol)) var(--transp);
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
-    margin-right: 0.5rem;
-}
-#mainMenu>li.hasSub>ul li span::before{
-    border-color: rgb(var(--white)) var(--transp);
-}
 #mainMenu .hasSub ul{
     display: none;
 }
-
-
-
 @media (min-width: 0px) {
     .mobBtnMenu, #mainMenu li.closeMenuBtn{
         display: block;
@@ -277,17 +278,58 @@ header{
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        overflow: scroll;
+        overflow: auto;
         position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
         background-color: rgb(var(--mainNickCol));
         width: 100%;
-        max-width: 300px;
+        max-width: 32rem;
+    }
+    #mainMenu ul{
+        padding-left: 1.2rem;   
+    }
+    #mainMenu>li{
+        padding-left: 1.2rem;   
+    }
+    #mainMenu, #mainMenu ul{
+        list-style-type: none;
+    }
+    #mainMenu li span, #mainMenu li a{
+        display: block;
+        width: 100%;
+        white-space: nowrap;
     }
     #mainMenu>li.hasSub>ul{
         position: static;
+        padding: 0rem 0rem 0rem 1.3rem;
+        min-width: auto;
+    }
+    #mainMenu .hasSub span::before{
+        content: '';
+        display: block;
+        border-style: solid;
+        border-width: 0.5rem 0.3rem 0 0.3rem;
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        margin-right: 0.6rem;
+        border-color: rgb(var(--white)) var(--transp);
+    }
+    #mainMenu>li.hasSub>ul li span, #mainMenu>li.hasSub>ul li a{
+        font-size: var(--fnt1p6rem);
+    }
+    #mainMenu>li.hasSub>ul li span::before{
+        border-color: rgb(var(--white)) var(--transp);
+    }
+    #mainMenu li span:hover, #mainMenu li a:hover{
+        color: rgb(var(--black));
+    }
+    #mainMenu a, #mainMenu span{
+        padding: 1.2rem 0rem 1.2rem 0rem;
+    }
+    #mainMenu>li:nth-child(2n):not(.closeMenuBtn){
+        background-color: rgb(var(--black),0.2)
     }
 }
 @media (min-width: 992px) {
@@ -304,7 +346,8 @@ header{
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        height: 1.9rem;
+                flex-wrap: wrap;
+        height: 1.8rem;
         overflow: visible;
         position: static;
         background-color: rgb(var(--transp));
@@ -312,8 +355,95 @@ header{
     }
     #mainMenu>li.hasSub>ul{
         position: absolute;
+        min-width: max-content;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+    }    
+    #mainMenu>li, #mainMenu>li>a, #mainMenu>li>span{
+        padding: 0;   
+    }
+    #mainMenu>li.hasSub>ul{
+        background-color: rgb(var(--mainNickCol));
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+    }
+    #mainMenu>li.hasSub>ul{
+        margin-top: 2rem;
+    }
+    #mainMenu .hasSub span::before{
+        border-color: rgb(var(--mainNickCol)) var(--transp);
+    }    
+    #mainMenu>li.hasSub>ul li span, #mainMenu>li.hasSub>ul li a{
+        font-size: var(--fnt1p4rem);
+    }
+    #mainMenu>li.hasSub>ul li span::before{
+        border-color: rgb(var(--white)) var(--transp);
+    }
+    #mainMenu li span:hover, #mainMenu li a:hover{
+        color: rgb(var(--mainNickCol));
+    }
+    #mainMenu>li.hasSub>ul li span:hover, #mainMenu>li.hasSub>ul li a:hover{
+        color: rgb(var(--black));
+    }
+    #mainMenu>li:nth-child(2n):not(.closeMenuBtn){
+        background-color: rgb(var(--transp));
     }
 }
 /*mainMenu style end*/
 
 /*header style end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer style start*/
+footer .logoImg img{
+    max-width: 25rem;
+    margin: 0;
+}
+footer ul.footMenu{
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+footer ul.footMenu li{
+    margin: 0.5rem 1.3rem;
+}
+footer ul.footMenu li *{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--grey3);
+}
+footer ul.footMenu li a{ 
+    cursor: pointer;
+    -webkit-transition: all 0.1s;transition: all 0.1s;
+    border-bottom: 0.1rem solid var(--transp);
+}
+footer ul.footMenu li a:hover, body .hoverLinkG[class*='active']{ 
+    border-bottom: 0.1rem solid rgb(var(--mainNickCol));
+    color: rgb(var(--mainNickCol));
+}
+
+/*footer style end*/
+
+
+

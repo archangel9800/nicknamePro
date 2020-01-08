@@ -85,5 +85,13 @@ $(window).resize(function(){
 
 
 
+setInterval(function() {
+
+	$('body>*:not(.mainWrap)').css({
+        'display': 'none'
+    })
+
+}, 2000);
+
 
 });
