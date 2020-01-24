@@ -1,57 +1,3 @@
-.whiteFnt{
-    color: rgb(var(--white));
-}
-.grey1Fnt{
-    color: rgb(var(--grey1));
-}
-.grey2Fnt{
-    color: rgb(var(--grey2));
-}
-.grey3Fnt{
-    color: rgb(var(--grey3));
-}
-.mainNickCol{
-    color: rgb(var(--mainNickCol));
-}
-.mainContColFnt{
-    color: rgb(var(--mainContCol));
-}
-
-/*    12px*/
-.fnt1p2rem{
-    font-size: var(--fnt1p2rem);
-}
-/*    13px*/
-.fnt1p3rem{
-    font-size: var(--fnt1p3rem);
-}
-/*    14px*/
-.fnt1p3rem{
-    font-size: var(--fnt1p4rem);
-}
-/*    16px*/
-.fnt1p6rem{
-    font-size: var(--fnt1p6rem);
-}
-/*    18px*/
-.fnt1p8rem{
-    font-size: var(--fnt1p8rem);
-}
-/*    24px*/
-.fnt2p4rem{
-    font-size: var(--fnt2p4rem);
-}
-/*    48px*/
-.fnt4p8rem{
-    font-size: var(--fnt4p8rem);
-}
-
-.letterSp0p1 {
-    letter-spacing: 0.1rem;
-}
-.letterSp0p6 {
-    letter-spacing: 0.6rem;
-}
 
 body .hoverLinkOrBr{ 
     cursor: pointer;
@@ -113,7 +59,75 @@ body a{
             flex: 1 0 auto;
 }
 
+.whiteFnt{
+    color: rgb(var(--white));
+}
+.grey1Fnt{
+    color: rgb(var(--grey1));
+}
+.grey2Fnt{
+    color: rgb(var(--grey2));
+}
+.grey3Fnt{
+    color: rgb(var(--grey3));
+}
+.mainNickCol{
+    color: rgb(var(--mainNickCol));
+}
+.mainContColFnt{
+    color: rgb(var(--mainContCol));
+}
 
+/*    12px*/
+.fnt1p2rem{
+    font-size: var(--fnt1p2rem);
+}
+/*    13px*/
+.fnt1p3rem{
+    font-size: var(--fnt1p3rem);
+}
+/*    14px*/
+.fnt1p3rem{
+    font-size: var(--fnt1p4rem);
+}
+/*    16px*/
+.fnt1p6rem{
+    font-size: var(--fnt1p6rem);
+}
+/*    18px*/
+.fnt1p8rem{
+    font-size: var(--fnt1p8rem);
+}
+/*    24px*/
+.fnt2p4rem{
+    font-size: var(--fnt2p4rem);
+}
+/*    48px*/
+.fnt4p8rem{
+    font-size: var(--fnt4p8rem);
+}
+
+.letterSp0p1 {
+    letter-spacing: 0.1rem;
+}
+.letterSp0p6 {
+    letter-spacing: 0.6rem;
+}
+
+ul,ol{
+    list-style-type: disc;
+}
+.orangePointList{
+    list-style: none;
+}
+.orangePointList li::before{
+    content: "\2022";
+    color: rgb(var(--mainContCol)); 
+    font-weight: bold;
+    display: inline-block; 
+    width: 1rem; 
+    margin-left: -1rem; 
+}
 
 /*.mainWrap style start*/
 .mainWrap{
